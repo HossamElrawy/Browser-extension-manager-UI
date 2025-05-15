@@ -1,0 +1,410 @@
+/* Reset and base styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+}
+
+/* Font face declaration for Noto Sans */
+@font-face {
+    font-family: "Noto Sans";
+    src: url(assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf);
+}
+
+/* Base body styles */
+body {
+    font-family: "Noto Sans", sans-serif;
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    margin: 2.5rem 8.5rem 4.0625rem 8.5rem; /* 40px 136px 65px 136px */
+    min-height: 72.25rem; /* 1156px */
+}
+
+/* Header container styles */
+.headerdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(200, 60%, 99%);
+    padding: 0.6875rem 0.9375rem; /* 11px 15px */
+    border-radius: 1rem; /* 16px */
+    border: 0.03125rem solid hsl(0, 0%, 78%); /* 0.5px */
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3); /* 2px 2px 4px */
+    margin-bottom: 4rem; /* 64px */
+}
+
+/* Dark mode toggle button styles */
+.mode-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem; /* 14px */
+    border: none;
+    border-radius: 1rem; /* 16px */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mode-button:hover {
+    background-color: hsla(226, 11%, 37%, 0.4);
+}
+
+.mode-button:focus {
+    outline: none;
+    outline: 0.125rem solid hsl(3, 77%, 44%); /* 2px */
+    outline-offset: 0.125rem; /* 2px */        
+}
+
+/* Main headline section styles */
+.headline-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.625rem; /* 42px */
+}
+
+/* Extension list title styles */
+.name-para {
+    color: hsl(227, 75%, 14%);
+    font-weight: 700;
+    font-size: 2rem; /* 32px */
+}
+
+/* Radio button group styles (hidden inputs) */
+.button-group input[type="radio"] {
+    display: none;
+}
+
+/* Filter button label styles */
+.button-group label {
+    padding: 0.9375rem 1.375rem; /* 15px 22px */
+    background: hsl(200, 60%, 99%);
+    cursor: pointer;
+    border: 0.03125rem solid hsl(0, 0%, 78%); /* 0.5px */
+    margin-left: 0.75rem; /* 12px */
+    font-family: "Noto Sans";
+    border-radius: 3.125rem; /* 50px */
+    color: hsl(227, 75%, 14%);
+    box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.3); /* 2px 2px 4px */
+    font-weight: 500;
+}
+
+/* Selected filter button styles */
+.button-group input[type="radio"]:checked + label {
+    background: hsl(3, 77%, 44%);
+    color: hsl(200, 60%, 99%);
+    border-color: hsl(3, 77%, 44%);
+    transition: opacity 0.3s ease;
+}
+
+/* Filter button hover/focus states */
+.button-group label:hover {
+    opacity: 0.6;
+} 
+
+.button-group label:focus {
+    outline: none;
+    outline: 0.125rem solid hsl(3, 77%, 44%); /* 2px */
+    outline-offset: 0.125rem; /* 2px */
+} 
+
+/* Extension card container styles */
+.main-con {
+    display: flex;
+    flex-direction: column;
+    background: hsl(200, 60%, 99%);
+    width: fit-content;
+    padding: 1.1875rem; /* 19px */
+    border-radius: 1rem; /* 16px */
+    border: 0.03125rem solid hsl(0, 0%, 78%); /* 0.5px */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3); /* 0px 2px 4px */
+    height: 10rem; /* 160px */
+    justify-content: space-between;
+    width: 100%;
+    min-height: 12.5rem; /* 200px */
+}
+
+/* Extension logo and title container */
+.logo-title-div {
+    display: flex;
+    gap: 1.0625rem; /* 17px */
+    align-items: start;
+}
+
+/* Extension description container */
+.exp-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* 16px */
+}
+
+/* Extension name styles */
+.head-para {
+    color: hsl(227, 75%, 14%);
+    font-weight: 700;
+    font-size: 1.25rem; /* 20px */
+}
+
+/* Extension description styles */
+.exp-para {
+    font-weight: 400;
+    color: hsl(226, 11%, 37%);
+    font-size: 0.9375rem; /* 15px */
+}
+
+/* Remove button container styles */
+.remove-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Remove button styles */
+.remove-button {
+    font-family: "Noto Sans";
+    padding: 0.75rem 1rem; /* 12px 16px */
+    border: 0.03125rem solid hsl(0, 0%, 78%); /* 0.5px */
+    border-radius: 3.125rem; /* 50px */
+    color: hsl(227, 75%, 14%);
+    font-weight: 500;
+    background-color: hsl(200, 60%, 99%);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.remove-button:hover {
+    background-color: hsl(3, 77%, 44%);
+    color: hsl(200, 60%, 99%);
+}
+
+.remove-button:focus {
+    border: none;
+    outline: none;
+    outline: 0.125rem solid hsl(3, 77%, 44%); /* 2px */
+    outline-offset: 0.125rem; /* 2px */
+} 
+
+/* Toggle switch styles */
+.toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 2.375rem; /* 38px */
+    height: 1.375rem; /* 22px */
+}
+
+.toggle-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Toggle slider styles */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(0, 0%, 78%);
+    transition: 0.4s;
+    border-radius: 2.125rem; /* 34px */
+    transition: opacity 0.3s ease;
+}
+
+.slider:hover {
+    opacity: 0.6;
+}
+
+.slider:focus {
+    outline: none;
+    outline: 0.125rem solid hsl(3, 77%, 44%); /* 2px */
+    outline-offset: 0.125rem; /* 2px */
+} 
+
+/* Toggle slider knob */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1rem; /* 16px */
+    width: 1rem; /* 16px */
+    left: 0.1875rem; /* 3px */
+    bottom: 0.1875rem; /* 3px */
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Toggle checked state */
+input:checked + .slider {
+    background-color: hsl(3, 77%, 44%);
+}
+
+input:checked + .slider:before {
+    transform: translateX(1rem); /* 16px */
+}
+
+/* Main grid layout for extension cards */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    column-gap: 0.75rem; /* 12px */
+    row-gap: 0.75rem; /* 12px */
+}
+
+/* Dark theme styles */
+.dark-body {
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+.dark-header-div {
+    background-color: hsl(226, 25%, 17%);
+    border: none;
+}
+
+.my-dark-path-2 {
+    fill: hsl(200, 60%, 99%);
+}
+
+/* Sun/moon icon visibility */
+.sun-logo {
+    display: none;
+}
+
+.not-hidden {
+    display: block;
+}
+
+/* Dark mode button styles */
+.dark-mode-button {
+    background-color: hsl(225, 23%, 24%);
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-button:hover {
+    background-color: hsla(0, 0%, 78%, 0.3);
+}
+
+.dark-mode-button:focus {
+    outline: none;
+    outline: 0.125rem solid hsl(3, 86%, 64%); /* 2px */
+    outline-offset: 0.125rem; /* 2px */        
+}
+
+/* Dark theme SVG path colors */
+.my-dark-path-1 {
+    fill: hsl(3, 86%, 64%);
+}
+
+.dark-name-para {
+    color: hsl(200, 60%, 99%);
+}
+
+/* Dark theme filter buttons */
+.dark-button-group label {
+    background: hsl(225, 23%, 24%);
+    border: 0.03125rem solid hsl(226, 11%, 37%); /* 0.5px */
+    color: hsl(200, 60%, 99%);
+}
+
+.dark-button-group label:hover {
+    opacity: 0.7;
+} 
+
+.dark-button-group label:focus {
+    outline: none;
+    outline: 0.125rem solid hsl(3, 86%, 64%); /* 2px */
+    outline-offset: 0.125rem; /* 2px */
+} 
+
+.dark-button-group input[type="radio"]:checked + label {
+    background: hsl(3, 86%, 64%);
+    color: hsl(227, 75%, 14%);
+    border-color: hsl(3, 86%, 64%);
+}
+
+/* Dark theme extension cards */
+.dark-main-con {
+    background: hsl(226, 25%, 17%);
+    border: 0.03125rem solid hsl(226, 11%, 37%); /* 0.5px */
+}
+
+.dark-head-para {
+    color: hsl(200, 60%, 99%);
+}
+
+.dark-exp-para {
+    color: hsl(0, 0%, 78%);
+}
+
+/* Dark theme remove button */
+.dark-remove-button {
+    color: hsl(200, 60%, 99%);
+    background-color: hsl(225, 23%, 24%);
+    border: 0.03125rem solid hsl(226, 11%, 37%); /* 0.5px */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-remove-button:hover {
+    background-color: hsl(3, 86%, 64%);
+    color: hsl(200, 60%, 99%);
+}
+
+.dark-remove-button:focus {
+    border: none;
+    outline: none;
+    outline: 0.125rem solid hsl(3, 86%, 64%); /* 2px */
+    outline-offset: 0.125rem; /* 2px */
+} 
+
+/* Dark theme toggle switch */
+.dark-input:checked + .slider {
+    background-color: hsl(3, 86%, 64%);
+}
+
+.dark-slider:focus {
+    outline: none;
+    background-color: hsl(3, 86%, 64%);
+    outline-offset: 0.125rem; /* 2px */
+} 
+
+/* Responsive styles for smaller screens */
+@media (max-width: 50rem) { /* 800px */
+    body {
+        min-height: auto;
+        margin: 1.25rem 1rem 4rem 1rem; /* 20px 16px 64px 16px */
+    }
+    
+    .headerdiv {
+        padding: 0.5rem 0.75rem; /* 8px 12px */
+        margin-bottom: 2.875rem; /* 46px */
+    }
+    
+    .headline-div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5rem; /* 56px */
+    }
+    
+    .name-para {
+        margin-bottom: 2.625rem; /* 42px */
+    }
+    
+    .main-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem; /* 14px */
+    }
+    
+    .logo-title-div {
+        display: flex;
+        gap: 0.875rem; /* 14px */
+        align-items: start;
+    }
+    
+    .exp-div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem; /* 12px */
+    } 
+}
